@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmTHmIoT Application</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 100px;
+      }
+      h1 {
+        color: #28a745;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>SmTHmIoT Application is Running!</h1>
+      <p>애플리케이션이 성공적으로 실행되었습니다.</p>
+      <p>현재 시간: <span id="current-time"></span></p>
+    </div>
+    <script>
+      function updateTime() {
+        document.getElementById("current-time").textContent =
+          new Date().toLocaleString();
+      }
+      updateTime();
+      setInterval(updateTime, 1000);
+    </script>
+  </body>
+</html>
